@@ -4,7 +4,6 @@ import { render } from 'react-dom';
 import configureStore from './store/configureStore';
 import { Provider } from 'react-redux';
 import HomePage from './components/home/HomePage';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './styles/styles.scss';
 import './styles/skills.scss';
 

@@ -3,12 +3,13 @@
 .container {
     width:100%;
     max-width: 1170px;
+    margin: 0 auto;
     .header {
         background-color:#fff;
     }
     h1 {
         display:inline-block;
-        width:40%;
+        width:37%;
         padding: 12px 8px 8px;
         font-size:26px;
         margin:0px;
@@ -22,10 +23,13 @@
         a {
             vertical-align:top;
             display:inline-block;
-            width:24%;
+            width:20%;
             padding: 8px 12px;
             text-align:center;
         }
+    }
+    h3 {
+        padding-left: 8px;
     }
 }
 

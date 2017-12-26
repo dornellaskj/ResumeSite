@@ -22,5 +22,15 @@
                 background-color: #009500;
             }
         }
+        label {
+            font-size: 26px;
+        }
+    }
+    .message-container {
+        span {
+            overflow-wrap: break-word;
+            display: block;
+            font-size: 18px;
+        }
     }
 }
