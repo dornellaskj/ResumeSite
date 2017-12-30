@@ -1,35 +1,61 @@
 @import './mixins';
-
+body {
+    background-color: #000;
+}
 .container {
     width:100%;
     max-width: 1170px;
     margin: 0 auto;
+    background-color: #333;
+    padding-bottom: 16px;
     .header {
-        background-color:#fff;
+        background-color:#000;
+        padding-bottom: 8px;
     }
     h1 {
         display:inline-block;
-        width:37%;
+        width: calc(100% - 60px);
         padding: 12px 8px 8px;
-        font-size:26px;
+        font-size:22px;
         margin:0px;
+        color:#fff;
+        @include largeTablet {
+            width:35%;
+            font-size:26px;
+        }
     }
     nav {
-        display:inline-block;
-        width:60%;
-        padding-right:8px;
-        font-size:26px;
+        width:44px;
+        font-size: 26px;
         vertical-align: top;
+        float: right;
+        text-align: right;
+        margin-top: 4px;
+        @include largeTablet {
+            width: 60%;
+        }
         a {
-            vertical-align:top;
-            display:inline-block;
-            width:20%;
+            display:none;
+            vertical-align: top;
+            width: calc(20% - 24px);
             padding: 8px 12px;
-            text-align:center;
+            text-align: center;
+            color: #ccc;
+            text-decoration: none;
+            border: 1px solid #26948f;
+            margin-right: 12px;
+            font-size: .8em;
+            @include largeTablet {
+                display: inline-block;
+            }
+            &:hover{
+                background-color: #333;
+            }
         }
     }
     h3 {
         padding-left: 8px;
+        color: #fff;
     }
 }
 
