@@ -17,21 +17,20 @@ class Skills extends Component {
         let skillsRendered = [];
         const {skills} = this.props;
         if(skills) {
-            skills.map( (skillRoot) => {
+            skills.map( (skillRoot, index) => {
                 let skillsRenderedInternal = [];
-                skillsRendered.push(<div className="skill-header-container"><h4 key={skillRoot.title} className="skill-header">{skillRoot.title}</h4></div>);
+                skillsRendered.push(<div key={skillRoot.title} className="skill-header-container"><h4 key={skillRoot.title} className="skill-header">{skillRoot.title}</h4></div>);
                 skillRoot.skills.map( (skill) => {
                     skillsRenderedInternal.push(
                         <Skill key={skill.label} label={skill.label} power={skill.power} message={skill.message} message2={skill.message2} />
                     );
                 });
-                skillsRendered.push(<div className="skill-group">{skillsRenderedInternal}</div>);
+                skillsRendered.push(<div key={index} className="skill-group">{skillsRenderedInternal}</div>);
             });
         }
         return skillsRendered;
     }
     render() {
-        
         return (
             <div className="skills-container">
                 <h4 className="skill-instructions-header">(Click on a skill to learn more.)</h4>
