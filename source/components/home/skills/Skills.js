@@ -4,15 +4,11 @@ import PropTypes from 'prop-types';
 import Skill from './Skill';
 
 class Skills extends Component {
-    // static propTypes = {
-    //     skills: PropTypes.shape([]).isRequired,
-    // }
     constructor(props, context) {
         super(props, context);
         this.state = {};
         this.buildSkills = this.buildSkills.bind(this);
     }
-
     buildSkills() {
         let skillsRendered = [];
         const {skills} = this.props;
@@ -41,3 +37,7 @@ class Skills extends Component {
 }
 
 export default Skills;
+
+Skills.propTypes = {
+    array: PropTypes.array
+};

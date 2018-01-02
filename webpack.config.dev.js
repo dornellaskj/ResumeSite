@@ -8,7 +8,8 @@ let Config = {
   noInfo: false,
   entry: 
     {
-      home: path.resolve(__dirname, 'source/index')
+      home: path.resolve(__dirname, 'source/index'),
+      resume: path.resolve(__dirname, 'source/resume')
     },
   target: 'web',
   output: {

@@ -12,6 +12,8 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import configureStore from '../../source/store/configureStore';
 import homePageConfigs from '../../source/headConfigs/homepage';
+import resumeConfigs from '../../source/headConfigs/resume';
+import ResumePage from '../../source/components/resume/ResumePage';
 let sass = require('node-sass');
 const server = Express();
 const port = 3000;
@@ -26,29 +28,45 @@ server.use(WebpackDevMiddleware(compiler, {
 server.use(WebpackHotMiddleware(compiler));
 
 server.get('/', buildHome);
+server.get('/resume', buildResume);
 
 function buildHome(request, response) {
   const store = configureStore();
+  let bundle = '/home-bundle.js';
   let html = renderToString(
     <Provider store={store} >
       <HomePage />
     </Provider>
   );
   let head = renderToString(
-    <Head headJson={homePageConfigs.default} />
+    <Head headJson={resumeConfigs.default} />
   );
   const preloadedState = store.getState();
-  response.status(200).send(renderFullPage(html, preloadedState, head));
+  response.status(200).send(renderFullPage(html, preloadedState, head, bundle));
+}
+function buildResume(request, response) {
+  const store = configureStore();
+  let bundle = '/resume-bundle.js';
+  let html = renderToString(
+    <Provider store={store} >
+      <ResumePage />
+    </Provider>
+  );
+  let head = renderToString(
+    <Head headJson={resumeConfigs.default} />
+  );
+  const preloadedState = store.getState();
+  response.status(200).send(renderFullPage(html, preloadedState, head, bundle));
 }
 
-function renderFullPage(html, preloadedState, head) {
+function renderFullPage(html, preloadedState, head, bundle) {
   return `
     <!doctype html>
     <html>
       ${head}
       <body>
         <div id="app">${html}</div>
-        <script src="/home-bundle.js"></script>
+        <script src=${bundle}></script>
         <script>
           window.__PRELOADED_STATE__ = ${JSON.stringify(preloadedState)}
         </script>
@@ -59,7 +77,6 @@ function renderFullPage(html, preloadedState, head) {
 
 server.listen(port, function(err) {
   /* eslint-disable no-console */
-
   if (err) {
     console.log(err);
   } else {
