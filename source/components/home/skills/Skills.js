@@ -39,5 +39,5 @@ class Skills extends Component {
 export default Skills;
 
 Skills.propTypes = {
-    array: PropTypes.array
+    skills: PropTypes.array
 };
