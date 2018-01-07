@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router';
-const pauseTime = 80;
+const pauseTime = 90;
 class Skill extends Component {
     constructor(props, context) {
         super(props, context);
