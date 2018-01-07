@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router';
-import Typing from 'react-typing-animation'
-
+const pauseTime = 80;
 class Skill extends Component {
     constructor(props, context) {
         super(props, context);
@@ -10,28 +9,41 @@ class Skill extends Component {
         this.state = {
             'powerStyle': powerStyle
         };
-        this.displayMessage = this.displayMessage.bind(this);
+        this.typeMessage = this.typeMessage.bind(this);
+        this.typeChar = this.typeChar.bind(this);
+        this.displayMessage = '';
+    }
+    
+
+    typeMessage() {
+        this.message = this.props.message.split('');
+        console.log(this.message);
+        this.typeChar(0);
     }
 
-    displayMessage() {
-        this.AnimatedTypingComponent =
-            <Typing>
-                <span>{this.props.message}</span>
-                <span> {this.props.message2}</span>
-            </Typing>;
-        this.setState({});
+    typeChar(index) {
+        this.displayMessage = this.displayMessage + this.message[index];
+        if(index + 1 <= this.message.length) {
+            if(this.message[index + 1] == ' ') {
+                this.displayMessage = this.displayMessage + this.message[index + 1];
+            }
+            setTimeout(() => {
+                this.setState({});
+                this.typeChar(index + 1);                
+            }, pauseTime);
+        }
     }
 
     render() {
         return (
-            <div className="skill-container" onClick={this.displayMessage}>
+            <div className="skill-container" onClick={this.typeMessage}>
                 <label>{this.props.label}</label>
                 <div className="meter-container" >
                     <div className="meter-bg"></div>
                     <div className="meter-power" style={this.state.powerStyle}></div>
                 </div>
                 <div className="message-container">
-                    {this.AnimatedTypingComponent}
+                    {this.displayMessage}
                 </div>
             </div>
         );
