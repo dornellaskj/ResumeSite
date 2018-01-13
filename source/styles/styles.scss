@@ -17,12 +17,12 @@ body {
         display:inline-block;
         width: calc(100% - 60px);
         padding: 12px 8px 8px;
-        font-size:22px;
+        font-size:26px;
         margin:0px;
         color:#fff;
         @include largeTablet {
             width:35%;
-            font-size:26px;
+            font-size:32px;
         }
     }
     .section-header {

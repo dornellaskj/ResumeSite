@@ -18,7 +18,7 @@ class Skills extends Component {
                 skillsRendered.push(<div key={skillRoot.title} className="skill-header-container"><h4 key={skillRoot.title} className="skill-header">{skillRoot.title}</h4></div>);
                 skillRoot.skills.map( (skill) => {
                     skillsRenderedInternal.push(
-                        <Skill key={skill.label} label={skill.label} power={skill.power} message={skill.message}/>
+                        <Skill key={skill.label} label={skill.label} power={skill.power} message={skill.message} tooltip={skill.tooltip}/>
                     );
                 });
                 skillsRendered.push(<div key={index} className="skill-group">{skillsRenderedInternal}</div>);

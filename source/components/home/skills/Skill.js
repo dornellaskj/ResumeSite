@@ -38,7 +38,7 @@ class Skill extends Component {
         return (
             <div className="skill-container" onClick={this.typeMessage}>
                 <label>{this.props.label}</label>
-                <div className="meter-container" >
+                <div className="meter-container" title={this.props.tooltip} >
                     <div className="meter-bg"></div>
                     <div className="meter-power" style={this.state.powerStyle}></div>
                 </div>
