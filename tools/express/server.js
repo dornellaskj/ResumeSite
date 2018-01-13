@@ -13,7 +13,9 @@ import { Provider } from 'react-redux';
 import configureStore from '../../source/store/configureStore';
 import homePageConfigs from '../../source/headConfigs/homepage';
 import resumeConfigs from '../../source/headConfigs/resume';
+import worksConfigs from '../../source/headConfigs/works';
 import ResumePage from '../../source/components/resume/ResumePage';
+import WorksPage from '../../source/components/works/WorksPage';
 let sass = require('node-sass');
 const server = Express();
 const port = 3000;
@@ -29,6 +31,7 @@ server.use(WebpackHotMiddleware(compiler));
 
 server.get('/', buildHome);
 server.get('/resume', buildResume);
+server.get('/works', buildWorks);
 
 function buildHome(request, response) {
   const store = configureStore();
@@ -54,6 +57,21 @@ function buildResume(request, response) {
   );
   let head = renderToString(
     <Head headJson={resumeConfigs.default} />
+  );
+  const preloadedState = store.getState();
+  response.status(200).send(renderFullPage(html, preloadedState, head, bundle));
+}
+
+function buildWorks(request, response) {
+  const store = configureStore();
+  let bundle = '/works-bundle.js';
+  let html = renderToString(
+    <Provider store={store} >
+      <WorksPage />
+    </Provider>
+  );
+  let head = renderToString(
+    <Head headJson={worksConfigs.default} />
   );
   const preloadedState = store.getState();
   response.status(200).send(renderFullPage(html, preloadedState, head, bundle));

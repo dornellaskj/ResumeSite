@@ -9,7 +9,8 @@ let Config = {
   entry: 
     {
       home: path.resolve(__dirname, 'source/index'),
-      resume: path.resolve(__dirname, 'source/resume')
+      resume: path.resolve(__dirname, 'source/resume'),
+      works: path.resolve(__dirname, 'source/works')
     },
   target: 'web',
   output: {

@@ -1,4 +1,4 @@
 module.exports.default = 
 {
-    "title": "Kevin Dornellas Resume Site"
+    "title": "Kevin Dornellas | Home Page"
 };
