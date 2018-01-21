@@ -1,0 +1,35 @@
+@import './mixins';
+.resume-container {
+    border: 2px solid #8e1515;
+    margin: 8px;
+    padding: 8px;
+    @include tablet {
+        margin: 16px;
+        padding: 16px;
+    }    
+    .section-header {
+        margin-top: 18px;
+    }
+}
+.header-container {
+    margin-bottom: -22px;
+    @include tablet {
+        margin-bottom: -30px;
+        margin-left:26px;
+    }
+    z-index: 7;
+    position: relative;
+    width: max-content;
+    margin-left:18px;
+    .resume-title { 
+        @include tablet {
+            font-size: 28px;
+        }
+        font-size: 1.8em;
+        color: #ccc;
+        background-color: #333;
+        display:inline-block;
+        padding: 0 4px;
+        margin: 16px 0 0 0;     
+    }
+}
