@@ -1,0 +1,243 @@
+.resume-container {
+  border: 2px solid #8e1515;
+  margin: 8px;
+  padding: 8px; }
+  @media all and (min-width: 504px) {
+    .resume-container {
+      margin: 16px;
+      padding: 16px; } }
+  .resume-container .section-header {
+    margin-top: 18px; }
+
+.header-container {
+  margin-bottom: -22px;
+  z-index: 7;
+  position: relative;
+  width: max-content;
+  margin-left: 18px; }
+  @media all and (min-width: 504px) {
+    .header-container {
+      margin-bottom: -30px;
+      margin-left: 26px; } }
+  .header-container .resume-title {
+    font-size: 1.8em;
+    color: #ccc;
+    background-color: #333;
+    display: inline-block;
+    padding: 0 4px;
+    margin: 16px 0 0 0; }
+    @media all and (min-width: 504px) {
+      .header-container .resume-title {
+        font-size: 28px; } }
+
+.skills-container {
+  width: 100%; }
+  .skills-container .skill-container {
+    margin: 12px auto;
+    width: 80%; }
+    .skills-container .skill-container .meter-container {
+      width: 100%;
+      height: 20px;
+      position: relative; }
+      .skills-container .skill-container .meter-container .meter-bg {
+        width: 100%;
+        height: 20px;
+        background-color: #b1b1b1;
+        border-radius: 25px; }
+      .skills-container .skill-container .meter-container .meter-power {
+        height: 20px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background-color: #26948f;
+        border-radius: 25px; }
+    .skills-container .skill-container label {
+      font-size: 1.2em;
+      color: #ccc; }
+      @media all and (min-width: 504px) {
+        .skills-container .skill-container label {
+          font-size: 24px; } }
+  .skills-container .message-container {
+    padding-top: 4px;
+    color: #ccc; }
+    .skills-container .message-container span {
+      overflow-wrap: break-word;
+      display: block;
+      font-size: 18px; }
+      @media all and (min-width: 504px) {
+        .skills-container .message-container span {
+          font-size: 22px; } }
+  .skills-container .skill-header {
+    font-size: 1.4em;
+    color: #ccc;
+    background-color: #333;
+    display: inline-block;
+    padding: 0 4px; }
+    @media all and (min-width: 504px) {
+      .skills-container .skill-header {
+        font-size: 22px; } }
+  .skills-container .skill-group {
+    border: 2px solid #8e1515;
+    margin: -44px 8px 0px;
+    padding-top: 18px;
+    padding-bottom: 14px; }
+    @media all and (min-width: 504px) {
+      .skills-container .skill-group {
+        margin: -44px 14px 0px; } }
+  .skills-container .skill-header-container {
+    z-index: 7;
+    position: relative;
+    width: max-content;
+    margin-left: 26px; }
+  .skills-container .skill-instructions-header {
+    font-size: 1.2em;
+    color: #ccc;
+    display: block;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: -.8em; }
+    @media all and (min-width: 504px) {
+      .skills-container .skill-instructions-header {
+        font-size: 22px; } }
+  .skills-container .efaGep {
+    display: none !important; }
+
+body {
+  background-color: #000;
+  position: realtive; }
+
+.container {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  background-color: #333;
+  padding-bottom: 16px; }
+  .container .header {
+    background-color: #000;
+    padding-bottom: 8px; }
+  .container h1 {
+    display: inline-block;
+    width: calc(100% - 60px);
+    padding: 12px 8px 8px;
+    font-size: 26px;
+    margin: 0px;
+    color: #fff; }
+    @media all and (min-width: 768px) {
+      .container h1 {
+        width: 35%;
+        font-size: 32px; } }
+  .container .section-header {
+    color: #ccc;
+    font-size: 22px;
+    padding: 8px;
+    margin-bottom: 0px; }
+  .container ul {
+    color: #ccc;
+    font-size: 18px;
+    margin-top: 0px;
+    margin-bottom: 0px; }
+    .container ul li {
+      margin-bottom: 8px; }
+  .container p {
+    color: #ccc;
+    font-size: 18px;
+    padding: 8px 16px;
+    margin: 0px; }
+  .container nav {
+    width: 44px;
+    font-size: 26px;
+    vertical-align: top;
+    float: right;
+    text-align: right;
+    margin-top: 4px; }
+    @media all and (min-width: 768px) {
+      .container nav {
+        width: 60%; } }
+    .container nav .nav-container {
+      height: 0px; }
+      @media all and (min-width: 768px) {
+        .container nav .nav-container {
+          display: block; } }
+      .container nav .nav-container a {
+        display: none; }
+        @media all and (min-width: 768px) {
+          .container nav .nav-container a {
+            display: inline-block; } }
+    .container nav a {
+      vertical-align: top;
+      width: calc(20% - 24px);
+      padding: 8px 12px;
+      text-align: center;
+      color: #ccc;
+      text-decoration: none;
+      border: 1px solid #26948f;
+      margin-right: 12px;
+      font-size: .8em; }
+      .container nav a:hover {
+        background-color: #333; }
+  .container h3 {
+    padding-left: 8px;
+    color: #fff; }
+  .container input[type=checkbox] {
+    display: none; }
+  .container input[type=checkbox]:checked ~ nav ul {
+    height: auto;
+    max-height: 12rem;
+    transition: all 1s cubic-bezier(0.5, 1, 0.22, 1); }
+  .container .hamburger {
+    display: block;
+    position: absolute;
+    top: 18px;
+    right: 12px;
+    height: 31px;
+    width: 30px;
+    cursor: pointer;
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1); }
+    @media all and (min-width: 768px) {
+      .container .hamburger {
+        display: none; } }
+  .container .line {
+    position: absolute;
+    display: block;
+    background: #ccc;
+    width: 100%;
+    height: .15rem;
+    border-radius: .2rem;
+    left: 0;
+    transition: all 0.6s cubic-bezier(0.5, 0.1, 0, 1.2); }
+  .container .line-1 {
+    top: 0; }
+  .container .line-2 {
+    top: 10px;
+    width: 100%; }
+  .container .line-3 {
+    top: 20px; }
+  .container input[type=checkbox]:checked ~ label .line-1 {
+    top: 0px;
+    width: 100%;
+    transform: translateX(-11px) rotate(-45deg) translateY(12px); }
+  .container input[type=checkbox]:checked ~ label .line-2 {
+    opacity: 0; }
+  .container input[type=checkbox]:checked ~ label .line-3 {
+    top: 14px;
+    width: 100%;
+    transform: translateX(-8px) rotate(45deg) translateY(-8px); }
+  .container input[type=checkbox]:checked ~ .nav-container {
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 64px;
+    left: -8px;
+    transition: all 1s cubic-bezier(0.5, 1, 0.22, 1);
+    z-index: 9999;
+    background-color: #000; }
+    .container input[type=checkbox]:checked ~ .nav-container a {
+      display: block;
+      width: 100%;
+      border-left: 0px;
+      border-right: 0px;
+      padding: 24px 12px;
+      font-size: 1.4em; }
+
+/*# sourceMappingURL=main.css.map*/

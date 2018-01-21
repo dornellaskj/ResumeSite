@@ -8,7 +8,8 @@ module.exports = {
   devtool: 'source-map',
   entry: {
     home: './src/index.js',
-    resume: './src/resume.js'
+    resume: './src/resume.js',
+    works: './src/works.js'
   },
   output: {
     path: path.join(__dirname, '../server/public'),
@@ -53,6 +54,6 @@ module.exports = {
     new UglifyJSPlugin({
       sourceMap: true
     }),
-    new ExtractTextPlugin('css/main.css'),
+    new ExtractTextPlugin('index.css'),
   ],
 };

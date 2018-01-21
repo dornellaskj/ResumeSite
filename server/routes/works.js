@@ -33,7 +33,7 @@ export default (req, res) => {
   let head = ReactDOMServer.renderToString(
     <Head headJson={configs.default} />
   );
-  let bundle = '/resume-index.js';
+  let bundle = '/works-index.js';
   
   if (context.url) {
     res.writeHead(301, {
