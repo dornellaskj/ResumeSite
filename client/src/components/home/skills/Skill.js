@@ -17,7 +17,6 @@ class Skill extends Component {
 
     typeMessage() {
         this.message = this.props.message.split('');
-        console.log(this.message);
         this.typeChar(0);
     }
 
