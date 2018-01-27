@@ -39,7 +39,9 @@ class Skill extends Component {
                 <label>{this.props.label}</label>
                 <div className="meter-container" title={this.props.tooltip} >
                     <div className="meter-bg"></div>
-                    <div className="meter-power" style={this.state.powerStyle}></div>
+                    <div className="meter-power" style={this.state.powerStyle}>
+                        <span>{this.props.tooltip}</span>
+                    </div>
                 </div>
                 <div className="message-container">
                     {this.displayMessage}

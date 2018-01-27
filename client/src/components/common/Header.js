@@ -12,7 +12,6 @@ class Header extends Component {
             <a href="/">Home</a>
             <a href="/resume/">Resume</a>
             <a href="/works/">Works</a>
-            <a href="/contact/">Contact</a>
           </div>
           <label htmlFor="checkbox_toggle" className="hamburger">
               <div className="line line-1"></div>
