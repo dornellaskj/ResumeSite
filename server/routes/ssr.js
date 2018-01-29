@@ -5,7 +5,6 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import reducers from '../../client/src/reducers/index';
 import { LIST_ACTIONS } from '../../client/src/consts/action_types';
-//import HomePage from '../../client/src/index';
 import HomePage from '../../client/src/components/home/HomePage';
 import ResumePage from '../../client/src/components/resume/ResumePage';
 import Head from '../../client/src/headConfigs/headBuilder';

@@ -13,6 +13,6 @@ app.get('/', ssr);
 app.get('/resume', resume);
 app.get('/works', works);
 
-app.listen(3000, () => {
-  console.log('Hello World listening on port 3000!');
+app.listen(80, () => {
+  console.log('Hello World listening on port 80!');
 });
