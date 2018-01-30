@@ -12,12 +12,16 @@ class Skill extends Component {
         this.typeMessage = this.typeMessage.bind(this);
         this.typeChar = this.typeChar.bind(this);
         this.displayMessage = '';
+        this.beenClicked = 0;
     }
     
 
     typeMessage() {
-        this.message = this.props.message.split('');
-        this.typeChar(0);
+        if(this.beenClicked == 0) {
+            this.beenClicked++;
+            this.message = this.props.message.split('');
+            this.typeChar(0);
+        }
     }
 
     typeChar(index) {
