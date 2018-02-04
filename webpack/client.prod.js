@@ -9,7 +9,8 @@ module.exports = {
   entry: {
     home: './src/index.js',
     resume: './src/resume.js',
-    works: './src/works.js'
+    works: './src/works.js',
+    charSheet: './src/charSheet.js'
   },
   output: {
     path: path.join(__dirname, '../server/public'),

@@ -3,6 +3,9 @@ body {
     background-color: #000;
     position: realtive;
 }
+a {
+    text-decoration: none;
+}
 .container {
     width:100%;
     max-width: 1170px;
@@ -16,7 +19,7 @@ body {
     h1 {
         display:inline-block;
         width: calc(100% - 60px);
-        padding: 12px 8px 8px;
+        padding: 8px 8px 8px;
         font-size:26px;
         margin:0px;
         color:#fff;
@@ -99,7 +102,7 @@ body {
     .hamburger {
         display: block;
         position: absolute;
-        top: 24px;
+        top: 20px;
         right: 18px;
         height: 31px;
         width: 30px;

@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router';
 import Header from '../common/Header';
 import WorksContainer from './WorksContainer';
 

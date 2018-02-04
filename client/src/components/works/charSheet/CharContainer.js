@@ -12,12 +12,10 @@ export default class WorksContainer extends Component {
         return (
             <div>
                 <div className="header-container">
-                    <h2 className="resume-title">Projects</h2>
+                    <h2 className="resume-title">Star Wars D and D Character Sheet</h2>
                 </div>
                 <div className="resume-container">
-                    <a href="/charSheet/">
-                        <h4 className="section-header">Star Wars D and D Character Sheet</h4>
-                    </a>
+                    <h4 className="section-header"></h4>
                 </div>
             </div>
         )
