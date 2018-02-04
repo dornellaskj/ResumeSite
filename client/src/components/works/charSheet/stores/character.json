@@ -1,0 +1,92 @@
+{
+    "header":{
+        "name": "",
+        "player": "",
+        "class": "",
+        "species":"",
+        "level": 1,
+        "age": 1,
+        "gender": "",
+        "height": "",
+        "weight": 10,
+        "destiny": "none"
+    },
+    "stats": {
+        "strength": 0,
+        "strModifier": 0,
+        "hitPoints": 0,
+        "speed": 0,
+        "dexterity": 0,
+        "dexModifier":0,
+        "constitution": 0,
+        "conModifier": 0,
+        "intelligence": 0,
+        "intModifier": 0,
+        "wisdom": 0,
+        "wisModifier" : 0,
+        "charisma": 0,
+        "chaModifier": 0,
+        "currentHP": 0,
+        "initiative": 0, 
+        "perception": 0,
+        "baseAttack": 0,
+        "forcePoints": 0,
+        "destinyPoints": 0,
+        "miscBonus": 0,
+        "defense": {
+            "fortitude": 0,
+            "ref": 0,
+            "Will": 0
+        },
+        "condition": 0,
+        "levelOrArmorFort": 0,
+        "classBonusFort": 0,
+        "miscFort": 0,
+        "levelOrArmorRef": 0,
+        "classBonusRef": 0,
+        "miscRef": 0,
+        "levelOrArmorWill": 0,
+        "classBonusWill": 0,
+        "miscWill": 0,
+        "darkSide":0,
+        "credits": 0
+    },
+    "skills": [
+        {"skill": {"name": "Acrobatics", "abilityMod":"dexModifier", "trained": 0, "skillFocus": 0, "misc": 0}},
+        {"skill": {"name": "Climb", "abilityMod":"strModifier", "trained": 0, "skillFocus": 0, "misc": 0}},
+        {"skill": {"name": "Deception", "abilityMod":"chaModifier", "trained": 0, "skillFocus": 0, "misc": 0}},
+        {"skill": {"name": "Endurance", "abilityMod":"conModifier", "trained": 0, "skillFocus": 0, "misc": 0}},
+        {"skill": {"name": "GatherInformation", "abilityMod":"chaModifier", "trained": 0, "skillFocus": 0, "misc": 0}},
+        {"skill": {"name": "Initiative", "abilityMod":"dexModifier", "trained": 0, "skillFocus": 0, "misc": 0}},
+        {"skill": {"name": "Jump", "abilityMod":"conModifier", "trained": 0, "skillFocus": 0, "misc": 0}},
+        {"skill": {"name": "Knowledge", "abilityMod":"intModifier", "trained": 0, "skillFocus": 0, "misc": 0}},
+        {"skill": {"name": "Knowledge", "abilityMod":"intModifier", "trained": 0, "skillFocus": 0, "misc": 0}},
+        {"skill": {"name": "Knowledge", "abilityMod":"intModifier", "trained": 0, "skillFocus": 0, "misc": 0}},
+        {"skill": {"name": "Mechanics", "abilityMod":"intModifier", "trained": 0, "skillFocus": 0, "misc": 0}},
+        {"skill": {"name": "Perception", "abilityMod":"wisModifier", "trained": 0, "skillFocus": 0, "misc": 0}},
+        {"skill": {"name": "Persuasion", "abilityMod":"chaModifier", "trained": 0, "skillFocus": 0, "misc": 0}},
+        {"skill": {"name": "Pilot", "abilityMod":"dexModifier", "trained": 0, "skillFocus": 0, "misc": 0}},
+        {"skill": {"name": "Ride", "abilityMod":"dexModifier", "trained": 0, "skillFocus": 0, "misc": 0}},
+        {"skill": {"name": "Stealth", "abilityMod":"dexModifier", "trained": 0, "skillFocus": 0, "misc": 0}},
+        {"skill": {"name": "Survival", "abilityMod":"wisModifier", "trained": 0, "skillFocus": 0, "misc": 0}},
+        {"skill": {"name": "Swim", "abilityMod":"strModifier", "trained": 0, "skillFocus": 0, "misc": 0}},
+        {"skill": {"name": "Treat Injury", "abilityMod":"wisModifier", "trained": 0, "skillFocus": 0, "misc": 0}},
+        {"skill": {"name": "Use Computer", "abilityMod":"intModifier", "trained": 0, "skillFocus": 0, "misc": 0}},
+        {"skill": {"name": "Use The Force", "abilityMod":"chaModifier", "trained": 0, "skillFocus": 0, "misc": 0}}
+    ],
+    "weapons": [
+        {"weapon":{"name": "", "atk":0, "damage":0, "crit":0, "type":"", "notes":""}}
+    ],
+    "equipment": [
+        {"eq": {"name":"", "weight":0}}
+    ],
+    "feats": [
+        {"eq": {"name":"", "weight":0}}
+    ],
+    "specialCombatActions": [
+        {"eq": {"name":"", "weight":0}}
+    ],
+    "languages":[],
+    "forcePowers": [],
+    "talents": []
+}
