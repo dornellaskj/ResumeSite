@@ -8,11 +8,11 @@ import './styles/index.scss';
 
 const store = createStore(reducers, {});
 
-if(typeof window !== 'undefined') {
+if (typeof window !== 'undefined') {
   render(
     <Provider store={store}>
-      <HomePage/>
+      <HomePage />
     </Provider>,
-    document.getElementById('app')
-  )
+    document.getElementById('app'),
+  );
 }

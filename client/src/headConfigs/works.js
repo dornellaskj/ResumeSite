@@ -1,4 +1,7 @@
 module.exports.default = 
 {
-    "title": "Kevin Dornellas | Works Page"
+	"title": "Kevin Dornellas | Works Page",
+	meta: [
+		{ name: "viewport", content: "width=device-width,initial-scale=1" }
+	]
 };

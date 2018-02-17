@@ -1,0 +1,130 @@
+@import './mixins';
+.characterForm {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #e1e1e1;
+	h2{
+		text-align:center;
+	}
+	button {
+		width:100%;
+	}
+}
+label {
+	display:inline-block;
+	width: 100%;
+	font-size:16px;
+}
+textarea {
+	width: 100%;
+}
+.radio {
+	vertical-align: top;
+	text-align: center;
+}
+input {
+	display: inline-block;
+	font-size:16px;
+	width:100%;
+	padding: 2px;
+}
+.headline-label {
+	text-align:left;
+}
+.headline-container {
+	padding-right:8px;
+}
+.characterForm {
+	.row {
+	width:100%;
+	}
+	div {
+		display: inline-block;
+	}
+}
+.control-label {
+	text-align: right;
+}
+.row-margin {
+	padding: 8px;
+}
+.headline-label2{
+	text-align:right;
+}
+.col-md-12 {
+	position:relative;
+	width:calc(100% - 8px);
+	margin:2px 4px;
+}
+.col-md-11 {
+	position:relative;
+	width: calc(91% - 8px);
+	margin:2px 4px;
+}
+.col-md-10 {
+	position:relative;
+	width: calc(83% - 8px);
+	margin:2px 4px;
+}
+.col-md-9 {
+	position:relative;
+	width: calc(75% - 8px);
+	margin:2px 4px;
+}
+.col-md-8 {
+	position:relative;
+	width: calc(66% - 8px);
+	margin:2px 4px;
+}
+.col-md-7 {
+	position:relative;
+	width: calc(58% - 8px);
+	margin:2px 4px;
+}
+.col-md-6 {
+	position:relative;
+	width: calc(50% - 8px);
+	margin:2px 4px;
+}
+.col-md-5 {
+	position:relative;
+	width: calc(41% - 8px);
+	margin:2px 4px;
+}
+.col-md-4 {
+	position:relative;
+	width: calc(33% - 8px);
+	margin:2px 4px;
+}
+.col-md-3 {
+	position:relative;
+	width: calc(24.4% - 8px);
+	margin:2px 4px;
+}
+.col-md-2 {
+	position:relative;
+	width: calc(16% - 8px);
+	margin:2px 4px;
+}
+.col-md-1 {
+	position:relative;
+	width: calc(8% - 8px);
+	margin:2px 4px;
+}
+.big-notes {
+	width:calc(100% - 8px);
+}
+.statsArea {
+	background-color: rgba(23,33,105,0.5);
+}
+.conditionArea {
+	background-color: rgba(23,93,15,0.5);
+}
+.defenseArea {
+	background-color: rgba(93,93,15,0.5);
+}
+.skillsArea {
+	background-color: rgba(193,93,15,0.5);
+}
+.weaponsArea {
+	background-color: rgba(193,23,15,0.5);
+}
