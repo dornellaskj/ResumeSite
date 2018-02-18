@@ -7,20 +7,33 @@ class Head extends Component {
 			config: props.headJson
 		};
 
-		this.buildCSS = this.buildCSS.bind(this);
+		this.buildLinks = this.buildLinks.bind(this);
 		this.buildMeta = this.buildMeta.bind(this);
 	}
 
-	buildCSS() {
+	buildLinks() {
+		let linkArray = [];
 		if (this.state.config.scss && this.state.config.scss.length > 0) {
-			console.log('things');
+			this.state.config.scss.forEach( linkIn => {
+				if (linkIn.type) {
+					linkArray.push(<link rel={linkIn.rel} type={linkIn.type} href={linkIn.href} />);
+				} else {
+					linkArray.push(<link rel={linkIn.rel} href={linkIn.href} />);
+				}
+				
+			});
 		}
+		return linkArray;
 	}
 	buildMeta() {
 		let metaArray = [];
 		if(this.state.config.meta) {
 			this.state.config.meta.forEach((metaIn) => {
-				metaArray.push(<meta name={metaIn.name} content={metaIn.content} />)
+				if(metaIn.name) {
+					metaArray.push(<meta name={metaIn.name} content={metaIn.content} />)
+				} else {
+					metaArray.push(<meta name={metaIn.property} content={metaIn.content} />)
+				}
 			});
 		}
 		return metaArray;
@@ -28,11 +41,12 @@ class Head extends Component {
 
 	render() {
 		let metaTags = this.buildMeta();
+		let links = this.buildLinks();
 		return (
 			<head>
 				<title>{this.state.config.title}</title>
 				{metaTags}
-				<link rel="stylesheet" type="text/css" href="/index.css" />
+				{links}				
 			</head>
 		);
 	}
