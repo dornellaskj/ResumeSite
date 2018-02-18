@@ -27,7 +27,7 @@ export default (req, res) => {
 function renderFullPage(head, bundle) {
 	return `
           <!doctype html>
-          <html>
+          <html lang="en">
 					${head}
             <body>
               <div id="app"></div>

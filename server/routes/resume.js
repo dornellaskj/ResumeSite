@@ -11,7 +11,7 @@ import configs from '../../client/src/headConfigs/resume';
 function renderFullPage(html, preloadedState, head, bundle) {
   return `
     <!doctype html>
-    <html>
+    <html lang="en">
       ${head}
       <body>
         <div id="app">${html}</div>
