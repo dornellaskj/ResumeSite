@@ -13,6 +13,7 @@ class Head extends Component {
 
 	buildCSS() {
 		if (this.state.config.scss && this.state.config.scss.length > 0) {
+			console.log('things');
 		}
 	}
 	buildMeta() {

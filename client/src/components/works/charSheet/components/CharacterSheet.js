@@ -4,6 +4,7 @@ import DefenseRow from "./DefenseRow.js";
 import SkillRow from "./SkillRow.js";
 import WeaponRow from "./WeaponRow.js";
 import GeneralRow from "./GeneralRow.js";
+import CharacterCreator from "./CreateChar";
 let state;
 
 export default class CharacterSheet extends Component {
@@ -19,13 +20,14 @@ export default class CharacterSheet extends Component {
 		this.removeItem = this.removeItem.bind(this);
 		this.addItem = this.addItem.bind(this);
 		this.onChangeItem = this.onChangeItem.bind(this);
+		this.charName = localStorage.getItem('charSelection');
 	}
 	onChange(event, key) {
 		this.setState({
 			[key]: event
 		});
 		this.state.header[key] = event;
-		localStorage.setItem("sagaChar", JSON.stringify(this.state.__proto__));
+		localStorage.setItem(this.charName, JSON.stringify(this.state.__proto__));
 	}
 	onChangeStats(event, key) {
 		let num = this.makeInt(event);
@@ -33,7 +35,7 @@ export default class CharacterSheet extends Component {
 			[key]: num
 		});
 		this.state.stats[key] = num;
-		localStorage.setItem("sagaChar", JSON.stringify(this.state.__proto__));
+		localStorage.setItem(this.charName, JSON.stringify(this.state.__proto__));
 	}
 	onChangeDef(event, key) {
 		let num = this.makeInt(event);
@@ -41,7 +43,7 @@ export default class CharacterSheet extends Component {
 			[key]: num
 		});
 		this.state.stats.defense[key] = num;
-		localStorage.setItem("sagaChar", JSON.stringify(this.state.__proto__));
+		localStorage.setItem(this.charName, JSON.stringify(this.state.__proto__));
 
 	}
 	onChangeSkill(event, key, index) {
@@ -50,7 +52,7 @@ export default class CharacterSheet extends Component {
 			[key]: num
 		});
 		this.state.skills[index].skill[key] = num;
-		localStorage.setItem("sagaChar", JSON.stringify(this.state.__proto__));
+		localStorage.setItem(this.charName, JSON.stringify(this.state.__proto__));
 
 	}
 	onChangeWeapon(event, key, index) {
@@ -58,7 +60,7 @@ export default class CharacterSheet extends Component {
 			[key]: event
 		});
 		this.state.weapons[index].weapon[key] = event;
-		localStorage.setItem("sagaChar", JSON.stringify(this.state.__proto__));
+		localStorage.setItem(this.charName, JSON.stringify(this.state.__proto__));
 
 	}
 	makeInt(num) {
@@ -78,7 +80,7 @@ export default class CharacterSheet extends Component {
 		e.preventDefault();
 		this.setState({});
 		this.state.weapons.push({ "weapon": { "name": "", "atk": 0, "damage": 0, "crit": 0, "type": "", "notes": "" } });
-		localStorage.setItem("sagaChar", JSON.stringify(this.state.__proto__));
+		localStorage.setItem(this.charName, JSON.stringify(this.state.__proto__));
 	}
 	renderWeapons(weapons) {
 		let weaponSet = [];
@@ -94,7 +96,7 @@ export default class CharacterSheet extends Component {
 		e.preventDefault();
 		this.setState({});
 		this.state.weapons.splice(index, 1);
-		localStorage.setItem("sagaChar", JSON.stringify(this.state.__proto__));
+		localStorage.setItem(this.charName, JSON.stringify(this.state.__proto__));
 	}
 	renderGeneral(array, name) {
 		let set = [];
@@ -110,20 +112,20 @@ export default class CharacterSheet extends Component {
 		e.preventDefault();
 		this.setState();
 		this.state[item].splice(index, 1);
-		localStorage.setItem("sagaChar", JSON.stringify(this.state.__proto__));
+		localStorage.setItem(this.charName, JSON.stringify(this.state.__proto__));
 	}
 	addItem(e, item) {
 		e.preventDefault();
 		this.setState();
 		this.state[item].push({ "eq": { "name": "", "weight": 0 } });
-		localStorage.setItem("sagaChar", JSON.stringify(this.state.__proto__));
+		localStorage.setItem(this.charName, JSON.stringify(this.state.__proto__));
 	}
 	onChangeItem(event, key, index, item) {
 		this.setState({
 			[key]: event
 		});
 		this.state[item][index].eq[key] = event;
-		localStorage.setItem("sagaChar", JSON.stringify(this.state.__proto__));
+		localStorage.setItem(this.charName, JSON.stringify(this.state.__proto__));
 
 	}
 	render() {
@@ -137,7 +139,7 @@ export default class CharacterSheet extends Component {
 		let talentsRendered = this.renderGeneral(this.state.talents, "talents");
 		let languagesRendered = this.renderGeneral(this.state.languages, "languages");
 		return (
-			<form className="characterForm">
+			<form>
 				<h2>Saga Character Sheet</h2>
 				<div className="row row-margin">
 					<div className="col-md-5">
@@ -580,6 +582,7 @@ export default class CharacterSheet extends Component {
 						</div>
 					</div>
 				</div>
+				<CharacterCreator />
 			</form>
 		);
 	}

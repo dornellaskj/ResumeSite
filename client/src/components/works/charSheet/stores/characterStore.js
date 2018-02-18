@@ -1,21 +1,23 @@
-var savedCharacter = require('./character.json');
+const savedCharacter = require('./character.json');
 function CharacterStore() {
-    var character;
-    if(localStorage.getItem("sagaChar")){
-        character = JSON.parse(localStorage.getItem("sagaChar"));
-    } else {
-        localStorage.setItem("sagaChar", JSON.stringify(savedCharacter));
-        character = savedCharacter;
-    }
-    
+	let character;
 
-    function getCharacter() {
-        return character;
-    }
+	function getSelectedChar(key) {
+		if(localStorage.getItem(key)) {
+			return JSON.parse(localStorage.getItem(key));
+		} else {
+			return null;
+		}
+	}
 
-    return {
-        getCharacter: getCharacter
-    }
+	function getCharacter() {
+		let character = getSelectedChar(localStorage.getItem('charSelection'));
+		return character;
+	}
+
+	return {
+		getCharacter: getCharacter
+	};
 }
 
 module.exports = CharacterStore();
