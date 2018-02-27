@@ -49,6 +49,7 @@ class ResumePage extends Component {
                 </ul>
                 <h4 className="section-header">Certifications </h4>
                 <ul>
+                    <li>SEO Certification</li>
                     <li>A + Certification</li>
                 </ul>
             </div>
