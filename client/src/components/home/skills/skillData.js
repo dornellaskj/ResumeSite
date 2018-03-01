@@ -22,7 +22,7 @@ export default [
             },
             {
                 "label": "C#",
-                "power": 70,
+                "power": 80,
                 "message": "I have been working with C# professionally for about 3 years. Most of my C# experience is in .NET.",
                 "tooltip": "Advanced"
             },
@@ -34,9 +34,9 @@ export default [
             },
             {
                 "label": "Java",
-                "power": 40,
-                "message": "I have worked on a few Java services, mostly building RESTful services. I am familiar with the Spring framework.",
-                "tooltip": "Intermediate"
+                "power": 70,
+                "message": "I have worked in Java RESTful services for Cars.com. I am familiar with the Spring framework.",
+                "tooltip": "Advanced"
             }
         ]
     },
@@ -51,7 +51,7 @@ export default [
             },
             {
                 "label": "C# .NET",
-                "power": 60,
+                "power": 70,
                 "message": "I am experienced in .NET. I have 3 years of professional experience using C#. My experience with .NET is not recent I have not used it in about 2 years.",
                 "tooltip": "Intermediate"
             },
@@ -74,14 +74,14 @@ export default [
             },
             {
                 "label": "React JS",
-                "power": 70,
+                "power": 80,
                 "message": "I have been studying React for a year now. this site is built with Node, Express, Redux, and React.",
                 "tooltip": "Advanced"
             },
             {
                 "label": "Angular JS",
                 "power": 80,
-                "message": "I have over 2 years experience working with Angular. I have built angular modules and I have worked in a large group on angular.",
+                "message": "I have over 2 years experience working with AngularJS for Cars.com. I have built angular modules and I have worked in a large group on angular.",
                 "tooltip": "Expert"
             }
         ]
@@ -115,7 +115,7 @@ export default [
             {
                 "label": "Unit Testing",
                 "power": 90,
-                "message": "I have extensive experience with unit testing and keeping high code coverage. I have worked with sinon, chai, mocha, jasmine, and I am comfortable with unit testing concepts.",
+                "message": "I have extensive experience with unit testing and keeping high code coverage. I have worked with sinon, chai, mocha, jasmine, junit, and I am comfortable with unit testing concepts.",
                 "tooltip": "Expert"
             }
         ]
