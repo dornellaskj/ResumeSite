@@ -34,7 +34,7 @@ export default [
             },
             {
                 "label": "Java",
-                "power": 70,
+                "power": 80,
                 "message": "I have worked in Java RESTful services for Cars.com. I am familiar with the Spring framework.",
                 "tooltip": "Advanced"
             }
