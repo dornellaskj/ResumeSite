@@ -29,12 +29,15 @@ export default class CharacterSheet extends Component {
 		this.state.header[key] = event;
 		localStorage.setItem(this.charName, JSON.stringify(this.state.__proto__));
 	}
-	onChangeStats(event, key) {
+	onChangeStats(event, key, secondMod) {
 		let num = this.makeInt(event);
 		this.setState({
 			[key]: num
 		});
 		this.state.stats[key] = num;
+		if(secondMod) {
+			this.state.stats[secondMod] = Math.floor((num / 2) - 5);
+		}
 		localStorage.setItem(this.charName, JSON.stringify(this.state.__proto__));
 	}
 	onChangeDef(event, key) {
@@ -201,7 +204,7 @@ export default class CharacterSheet extends Component {
 					<div className="row row-margin">
 						<div className="col-md-12">
 							<div className="col-md-3">
-								<CharacterRow default={this.state.stats.strength} onBlur={this.onChangeStats} width="5" label="STRength" id="strength" type="tel" />
+								<CharacterRow default={this.state.stats.strength} onBlur={this.onChangeStats} width="5" label="STRength" id="strength" type="tel"  secondMod="strModifier"/>
 							</div>
 							<div className="col-md-1 modifier">
 								<input type="text" className="form-control" value={Math.floor((this.state.stats.strength / 2) - 5)} onChange={e => this.onChangeStats(e.target.value, "strModifier")} id="strmodifier" name="strModifier" />
@@ -217,7 +220,7 @@ export default class CharacterSheet extends Component {
 					<div className="row row-margin">
 						<div className="col-md-12">
 							<div className="col-md-3">
-								<CharacterRow default={this.state.stats.dexterity} onBlur={this.onChangeStats} width="5" label="DEXterity" id="dexterity" />
+								<CharacterRow default={this.state.stats.dexterity} onBlur={this.onChangeStats} width="5" label="DEXterity" id="dexterity" secondMod="dexModifier"/>
 							</div>
 							<div className="col-md-1 modifier">
 								<input type="text" className="form-control" value={Math.floor((this.state.stats.dexterity / 2) - 5)} onChange={e => this.onChangeStats(e.target.value, "dexModifier")} id="dexmodifier" name="dexModifier" />
@@ -233,7 +236,7 @@ export default class CharacterSheet extends Component {
 					<div className="row row-margin">
 						<div className="col-md-12">
 							<div className="col-md-3">
-								<CharacterRow default={this.state.stats.constitution} onBlur={this.onChangeStats} width="5" label="CONstitution" id="constitution" />
+								<CharacterRow default={this.state.stats.constitution} onBlur={this.onChangeStats} width="5" label="CONstitution" id="constitution" secondMod="conModifier"/>
 							</div>
 							<div className="col-md-1 modifier">
 								<input type="text" className="form-control" value={Math.floor((this.state.stats.constitution / 2) - 5)} onChange={e => this.onChangeStats(e.target.value, "conModifier")} id="conmodifier" name="conModifier" />
@@ -249,7 +252,7 @@ export default class CharacterSheet extends Component {
 					<div className="row row-margin">
 						<div className="col-md-12">
 							<div className="col-md-3">
-								<CharacterRow default={this.state.stats.intelligence} onBlur={this.onChangeStats} width="5" label="INTelligence" id="intelligence" />
+								<CharacterRow default={this.state.stats.intelligence} onBlur={this.onChangeStats} width="5" label="INTelligence" id="intelligence" secondMod="intModifier"/>
 							</div>
 							<div className="col-md-1 modifier">
 								<input type="text" className="form-control" value={Math.floor((this.state.stats.intelligence / 2) - 5)} id="intmodifier" name="intModifier" />
@@ -265,7 +268,7 @@ export default class CharacterSheet extends Component {
 					<div className="row row-margin">
 						<div className="col-md-12">
 							<div className="col-md-3">
-								<CharacterRow default={this.state.stats.wisdom} onBlur={this.onChangeStats} width="5" label="WISdom" id="wisdom" />
+								<CharacterRow default={this.state.stats.wisdom} onBlur={this.onChangeStats} width="5" label="WISdom" id="wisdom" secondMod="wisModifier"/>
 							</div>
 							<div className="col-md-1 modifier">
 								<input type="text" className="form-control" value={Math.floor((this.state.stats.wisdom / 2) - 5)} id="wisModifier" onChange={e => this.onChangeStats(e.target.value, "wisModifier")} name="wisModifier" />
@@ -281,7 +284,7 @@ export default class CharacterSheet extends Component {
 					<div className="row row-margin">
 						<div className="col-md-12">
 							<div className="col-md-3">
-								<CharacterRow default={this.state.stats.charisma} onBlur={this.onChangeStats} width="5" label="CHArisma" id="charisma" />
+								<CharacterRow default={this.state.stats.charisma} onBlur={this.onChangeStats} width="5" label="CHArisma" id="charisma" secondMod="chaModifier"/>
 							</div>
 							<div className="col-md-1 modifier">
 								<input type="text" className="form-control" value={Math.floor((this.state.stats.charisma / 2) - 5)} onChange={e => this.onChangeStats(e.target.value, "chaModifier")} id="chaModifier" name="chaModifier" />
