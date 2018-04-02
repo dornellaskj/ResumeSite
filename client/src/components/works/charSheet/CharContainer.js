@@ -16,8 +16,7 @@ export default class CharContainer extends Component {
 	}
 	changeCharacter(name) {
 		localStorage.setItem('charSelection', name);
-		_character = characterStore.getCharacter();
-		this.setState({});
+		this.reload();
 	}
 	reload() {
 		_character = characterStore.getCharacter();
