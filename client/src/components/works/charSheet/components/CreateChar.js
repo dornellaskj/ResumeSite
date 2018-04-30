@@ -1,3 +1,4 @@
+'use strict';
 import React, { Component } from 'react';
 let swDefaultChar = require('../stores/character.json');
 
@@ -19,7 +20,7 @@ export default class CreateChar extends Component {
 	}
 
 	createCharacter(type, name) {
-		if (!localStorage.getItem(name)) {
+		if (name && name.length && !localStorage.getItem(name)) {
 			switch (type) {
 			case "sagaChar":
 				let charData = swDefaultChar;

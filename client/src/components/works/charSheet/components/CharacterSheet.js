@@ -27,7 +27,7 @@ export default class CharacterSheet extends Component {
 			[key]: event
 		});
 		this.state.header[key] = event;
-		localStorage.setItem(this.charName, JSON.stringify(this.state.__proto__));
+		localStorage.setItem(this.state.header.name, JSON.stringify(this.state.__proto__));
 	}
 	onChangeStats(event, key, secondMod) {
 		let num = this.makeInt(event);
@@ -146,7 +146,7 @@ export default class CharacterSheet extends Component {
 				<h2>Saga Character Sheet</h2>
 				<div className="row row-margin">
 					<div className="col-md-5">
-						<CharacterRow default={this.state.header.name} onBlur={this.onChange} width="10" label="Name" placeholder="Character Name" id="name" type="text" />
+						<CharacterRow default={this.state.header.name} width="10" label="Name" placeholder="Character Name" id="name" type="text" />
 					</div>
 					<div className="col-md-4">
 						<CharacterRow default={this.state.header.player} onBlur={this.onChange} width="9" label="Player" placeholder="Player Name" id="player" type="text" />
