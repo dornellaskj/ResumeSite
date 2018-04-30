@@ -14,7 +14,7 @@ export default class CharacterSelector extends Component {
 			const key = localStorage.key(i);
 			try {
 				const item = JSON.parse(localStorage.getItem(key));
-				if(item.header) {
+				if(item.header && item.header.name && item.header.name.length) {
 					this.characters.push(item.header.name);
 				}
 			} catch(e) {

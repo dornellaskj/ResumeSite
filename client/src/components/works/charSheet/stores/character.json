@@ -9,7 +9,8 @@
         "gender": "",
         "height": "",
         "weight": 10,
-        "destiny": "none"
+        "destiny": "none",
+        "notes":"notes here."
     },
     "stats": {
         "strength": 0,
