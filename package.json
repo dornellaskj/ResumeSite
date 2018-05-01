@@ -1,7 +1,7 @@
 {
   "name": "react-expressjs",
   "version": "4.0.0",
-  "description": "Boilerplate for ReactJS project with ExpressJS server",
+  "description": "Kevin Dornellas personal site",
   "main": "server/bin/server.js",
   "scripts": {
     "dev": "webpack-dev-server --config webpack/client.dev.js",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tahnik/react-express-webpack-babel"
+    "url": "git+https://github.com/dornellaskj/ResumeSite"
   },
   "keywords": [
     "react",
@@ -24,7 +24,7 @@
     "react router v4",
     "redux"
   ],
-  "author": "Tahnik Mustasin",
+  "author": "Kevin Dornellas",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/tahnik/react-express-webpack-babel/issues"
