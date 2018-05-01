@@ -7,8 +7,13 @@ export default class PromiseContainer extends Component {
 	}
 	render() {
 		return (
-			<div className="promise-container">
-				Hello!
+			<div>
+				<div className="header-container">
+						<h2 className="resume-title">Javascript Promises</h2>
+				</div>
+				<div className="resume-container">
+						hello!
+				</div>
 			</div>
 		);
 	}
