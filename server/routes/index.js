@@ -3,6 +3,7 @@ import ssr from './ssr';
 import resume from './resume';
 import works from './works';
 import charSheet from './charSheet';
+import promises from './promises';
 
 const app = express();
 
@@ -14,6 +15,7 @@ app.get('/', ssr);
 app.get('/resume', resume);
 app.get('/works', works);
 app.get('/charSheet', charSheet);
+app.get('/promises', promises);
 
 app.listen(80, () => {
   console.log('Hello World listening on port 80!');

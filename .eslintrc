@@ -22,7 +22,6 @@
     "mocha": true
   },
   "rules": {
-    "indent": [2, "tab"],
     "quotes": 0,
     "no-console": 1,
     "no-debugger": 1,

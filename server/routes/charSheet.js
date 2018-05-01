@@ -1,10 +1,7 @@
 import express from 'express';
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
-import { createStore } from 'redux';
-import { Provider } from 'react-redux';
-import reducers from '../../client/src/reducers/index';
-import { LIST_ACTIONS } from '../../client/src/consts/action_types';
+
 import Head from '../../client/src/headConfigs/headBuilder';
 import configs from '../../client/src/headConfigs/charSheet';
 

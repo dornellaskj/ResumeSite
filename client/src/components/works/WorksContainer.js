@@ -18,6 +18,9 @@ export default class WorksContainer extends Component {
                     <a href="/charSheet/">
                         <h4 className="section-header">Star Wars D and D Character Sheet</h4>
                     </a>
+                    <a href="/promises/">
+                        <h4 className="section-header">Learn Javascript Promises</h4>
+                    </a>
                 </div>
             </div>
         )

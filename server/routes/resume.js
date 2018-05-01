@@ -36,10 +36,10 @@ export default (req, res) => {
   const html = ReactDOMServer.renderToString(
     <Provider store={store}>
       <ResumePage />
-    </Provider>,
+    </Provider>
   );
   const head = ReactDOMServer.renderToString(
-    <Head headJson={configs.default} />,
+    <Head headJson={configs.default} />
   );
   const bundle = '/resume-index.js';
   if (context.url) {

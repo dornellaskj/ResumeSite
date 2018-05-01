@@ -10,7 +10,8 @@ module.exports = {
     home: './src/index.js',
     resume: './src/resume.js',
     works: './src/works.js',
-    charSheet: './src/charSheet.js'
+    charSheet: './src/charSheet.js',
+    promises: './src/promises.js'
   },
   output: {
     path: path.join(__dirname, '../server/public'),

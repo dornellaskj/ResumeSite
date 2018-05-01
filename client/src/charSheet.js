@@ -6,5 +6,5 @@ import './styles/charSheet.scss';
 
 render(
   <CharSheet />,
-  document.getElementById('app'),
+  document.getElementById('app')
 );
