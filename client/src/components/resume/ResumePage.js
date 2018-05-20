@@ -17,7 +17,7 @@ class ResumePage extends Component {
                 
                 <h4 className="section-header">Overview</h4>
                 <p>
-                    I am a Senior Software Developer with over 13 years of experience in technology. I started out as a Network Administrator in the Marine Corps.
+                    I am a Senior Software Developer with over 14 years of experience in technology. I started out as a Network Administrator in the Marine Corps.
                     I am an accomplished network and server Engineer; I am also a full stack developer; for the last two years, I have been working with a 
                     fortune 500 company that has entrusted me with their SEO health as well as continued development of their product. I am also experienced in unit testing, 
                     functional testing, and RESTful services. I am constantly expanding my knowledge; I pride myself on my versatility, and not just knowing how to solve a 
