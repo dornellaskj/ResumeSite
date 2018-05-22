@@ -87,6 +87,17 @@ export default [
         ]
     },
     {
+        "title": "Cloud Services",
+        "skills": [
+            {
+                "label": "Amazon Web Services (AWS)",
+                "power": 60,
+                "message": "I have been working with AWS for about 3 years now. I have build full server setups with load balancers, I know how to keep costs low.",
+                "tooltip": "Intermediate"
+            }
+        ]
+    },
+    {
         "title": "Database Technologies",
         "skills": [
             {
@@ -110,6 +121,40 @@ export default [
         ]
     },
     {
+        "title": "DEVOPS",
+        "skills": [
+            {
+                "label": "Jenkins",
+                "power": 60,
+                "message": "I have been using Jenkins to handle my deployments for 2 years.",
+                "tooltip": "Intermediate"
+            },
+            {
+                "label": "Docker",
+                "power": 50,
+                "message": "I have been working with Docker for 2 years",
+                "tooltip": "Intermediate"
+            },
+        ]
+    },
+    {
+        "title": "Agile Development",
+        "skills": [
+            {
+                "label": "Jira",
+                "power": 100,
+                "message": "I have been using Jira to track my team's progress for 2 years.",
+                "tooltip": "Expert"
+            },
+            {
+                "label": "Daily Standups",
+                "power": 100,
+                "message": "I have been practicing daily standups professionally for 2 years.",
+                "tooltip": "Expert"
+            }
+        ]
+    },
+    {
         "title": "Testing",
         "skills": [
             {
@@ -127,6 +172,29 @@ export default [
                 "label": "Git",
                 "power": 90,
                 "message": "I have been working with Git for many years. I am very familiar with this tool, I use it daily.",
+                "tooltip": "Expert"
+            }
+        ]
+    }, 
+    {
+        "title": "Management",
+        "skills" : [
+            {
+                "label": "Team Lead",
+                "power": 80,
+                "message": "I have successfully lead a team of 6 developers and 1 QA for over a year. I keep them engaged and on task.",
+                "tooltip": "Expert"
+            },
+            {
+                "label": "Mentoring",
+                "power": 80,
+                "message": "I have been mentoring and growing developer's careers for over 3 years, I help them engineer their career path and their education.",
+                "tooltip": "Expert"
+            },
+            {
+                "label": "Hiring/recruiting",
+                "power": 80,
+                "message": "I have successfully interviewed over 70 developers from Associate to Principal level.",
                 "tooltip": "Expert"
             }
         ]
