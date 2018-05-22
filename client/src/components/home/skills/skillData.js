@@ -23,7 +23,7 @@ export default [
             {
                 "label": "C#",
                 "power": 80,
-                "message": "I have been working with C# professionally for about 3 years. Most of my C# experience is in .NET.",
+                "message": "I have been working with C# professionally for about 3 years. Most of my C# experience is in .NET and WPF.",
                 "tooltip": "Advanced"
             },
             {
@@ -52,7 +52,7 @@ export default [
             {
                 "label": "C# .NET",
                 "power": 70,
-                "message": "I am experienced in .NET. I have 3 years of professional experience using C#. My experience with .NET is not recent I have not used it in about 2 years.",
+                "message": "I am experienced in .NET. I have 3 years of professional experience using C#. My experience with .NET.",
                 "tooltip": "Intermediate"
             },
             {
@@ -82,7 +82,7 @@ export default [
                 "label": "Angular JS",
                 "power": 80,
                 "message": "I have over 2 years experience working with AngularJS for Cars.com. I have built angular modules and I have worked in a large group on angular.",
-                "tooltip": "Expert"
+                "tooltip": "Advanced"
             }
         ]
     },
@@ -92,7 +92,7 @@ export default [
             {
                 "label": "MSSQL",
                 "power": 95,
-                "message": "I have been my own Database admin. I have experience builidng stored proceedures, views, and complicated querys.",
+                "message": "I have 5 years profesional experience. I have experience builidng stored proceedures, views, and complicated querys.",
                 "tooltip": "Expert"
             },
             {
