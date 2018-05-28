@@ -22,8 +22,8 @@ export default [
             },
             {
                 "label": "C#",
-                "power": 80,
-                "message": "I have been working with C# professionally for about 3 years. Most of my C# experience is in .NET and WPF.",
+                "power": 90,
+                "message": "I have been working with C# professionally for about 5 years. Most of my C# experience is in .NET and WPF.",
                 "tooltip": "Advanced"
             },
             {
@@ -51,9 +51,9 @@ export default [
             },
             {
                 "label": "C# .NET",
-                "power": 70,
-                "message": "I am experienced in .NET. I have 3 years of professional experience using C#. My experience with .NET.",
-                "tooltip": "Intermediate"
+                "power": 90,
+                "message": "I am experienced in .NET. I have 5 years of professional experience using C#. My experience includes .NET MVC and forms, Razor, Unit testing, linq, and Entity Framework.",
+                "tooltip": "Advanced"
             },
             {
                 "label": "Apache",
@@ -75,7 +75,7 @@ export default [
             {
                 "label": "React JS",
                 "power": 80,
-                "message": "I have been studying React for a year now. this site is built with Node, Express, Redux, and React.",
+                "message": "I have been working with React for over a year now. this site is built with Node, Express, Redux, and React.",
                 "tooltip": "Advanced"
             },
             {
@@ -160,7 +160,7 @@ export default [
             {
                 "label": "Unit Testing",
                 "power": 90,
-                "message": "I have extensive experience with unit testing and keeping high code coverage. I have worked with sinon, chai, mocha, jasmine, junit, and I am comfortable with unit testing concepts.",
+                "message": "I have extensive experience with unit testing and keeping high code coverage. I have worked with sinon, chai, mocha, jasmine, junit, C# and I am comfortable with unit testing concepts.",
                 "tooltip": "Expert"
             }
         ]
@@ -181,19 +181,19 @@ export default [
         "skills" : [
             {
                 "label": "Team Lead",
-                "power": 80,
+                "power": 90,
                 "message": "I have successfully lead a team of 6 developers and 1 QA for over a year. I keep them engaged and on task.",
                 "tooltip": "Expert"
             },
             {
                 "label": "Mentoring",
-                "power": 80,
+                "power": 90,
                 "message": "I have been mentoring and growing developer's careers for over 3 years, I help them engineer their career path and their education.",
                 "tooltip": "Expert"
             },
             {
                 "label": "Hiring/recruiting",
-                "power": 80,
+                "power": 90,
                 "message": "I have successfully interviewed over 70 developers from Associate to Principal level.",
                 "tooltip": "Expert"
             }
