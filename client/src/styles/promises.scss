@@ -1,0 +1,28 @@
+.text-area {
+  min-height: 300px;
+  display: block;
+  background-color:#fff;
+}
+
+.text-area2 {
+  min-height:100px;
+}
+
+.run-button {
+  padding: 12px, 8px;
+  background-color: #a5a5a5;
+  cursor: pointer;
+  margin:12px;
+}
+
+.next-button {
+  padding: 12px, 8px;
+  background-color: #a5a5a5;
+  cursor: pointer;
+  display:inline-block;
+  margin-left:16px;
+}
+
+.promise-header {
+  display:inline-block;
+}
