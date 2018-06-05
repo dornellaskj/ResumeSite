@@ -89,8 +89,8 @@ export default [
     });
 		`,
     title: "Example 4: Promise Error handling",
-    overview: `let's say you are running a promise all, but one of the promises fails... What then? You can catch each promise individually and handle the failure gacefully
-    ensuring that if the other promises reolve you still have the result from those. As seen in the example below promise1 will fail, and the catch will fire. The promise all 
+    overview: `let's say you are running a promise all, but one of the promises fails... What then? You can catch each promise individually and handle the failure gracefully
+    ensuring that if the other promises resolve you still have the result from those. As seen in the example below promise1 will fail, and the catch will fire. The promise all 
     will still execute.`    
   }
 ];

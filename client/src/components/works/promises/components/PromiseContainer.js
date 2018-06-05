@@ -35,11 +35,11 @@ export default class PromiseContainer extends Component {
 			overview: pageData[index].overview,
 			index: index
 		});
+		this.logs = "";
 		this.updateCode(pageData[index].code);
 	}
 
 	runCode() {
-		console.log(this.state.code);
 		this.logs = "";
 		setTimeout(eval(this.state.codeRun), 100);
 	}
