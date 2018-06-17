@@ -92,5 +92,21 @@ export default [
     overview: `let's say you are running a promise all, but one of the promises fails... What then? You can catch each promise individually and handle the failure gracefully
     ensuring that if the other promises resolve you still have the result from those. As seen in the example below promise1 will fail, and the catch will fire. The promise all 
     will still execute.`    
+  },
+  {
+    code: `
+    
+    const promise = new Promise(function(resolve, reject) {
+			setTimeout(resolve, 400, 'bingo!!!');
+    });
+    async function numbers() {
+      let response = await promise;
+      alert(response);
+      return response;
+    }
+    console.log(numbers());`,
+    title: "Example 5: Async and Await",
+    overview: `The aync keyword can be placed in front of any function delaration and that function will automatically be wrapped in a promise. The await keyword will ensure 
+    that the promise has resolved before it continues`    
   }
 ];
