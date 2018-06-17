@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import { POINT_CONVERSION_UNCOMPRESSED } from 'constants';
 import promises from '../../../../headConfigs/promises';
 import pageData from './promiseData';
-
+let modify;
 export default class PromiseContainer extends Component {
-
+	
 	constructor(props) {
 		super(props);
 		this.state={};
+		modify={};
 		this.state.code = pageData[0].code;
 		this.state.codeRun = this.state.code.replace(/console.log/g, "this.consoleLog");
 		this.state.title = pageData[0].title;
@@ -19,17 +20,30 @@ export default class PromiseContainer extends Component {
 		this.runCode = this.runCode.bind(this);
 		this.consoleLog = this.consoleLog.bind(this);
 		this.next = this.next.bind(this);
+		this.previous = this.previous.bind(this);
+		modify.consoleLog = this.consoleLog;
 	}
 
 	updateCode(newCode) {
 		this.setState({
 			code: newCode,
-			codeRun: newCode.replace(/console.log/g, "this.consoleLog")
+			codeRun: newCode.replace(/console.log/g, "modify.consoleLog")
 		});
 	}
 
 	next() {
 		let index = this.state.index + 1;
+		this.setState({
+			title: pageData[index].title,
+			overview: pageData[index].overview,
+			index: index
+		});
+		this.logs = "";
+		this.updateCode(pageData[index].code);
+	}
+
+	previous() {
+		let index = this.state.index - 1;
 		this.setState({
 			title: pageData[index].title,
 			overview: pageData[index].overview,
@@ -69,8 +83,9 @@ export default class PromiseContainer extends Component {
 						<p>{this.state.overview}</p>
 
 						<h3 className="promise-header">{this.state.title}</h3>
-						<button className="next-button" onClick={this.next}>next</button>
-						<textarea  className="text-area" notranslate onChange={e =>this.updateCode(e.target.value)} value={this.state.code}/>
+						{this.state.index > 0 && <button className="next-button" onClick={this.previous}>prev</button>}
+						{this.state.index < pageData.length - 1 && <button className="next-button" onClick={this.next}>next</button>}
+						<textarea autoComplete="off" autoCorrect="off" autoCapitalize="off" spellCheck="false" className="text-area" notranslate onChange={e =>this.updateCode(e.target.value)} value={this.state.code}/>
 						<button className="run-button" onClick={this.runCode}>Run It!</button>
 						<textarea className="text-area2" value={this.logs}/>
 				</div>

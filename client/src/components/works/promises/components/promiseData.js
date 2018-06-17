@@ -1,12 +1,13 @@
 export default [
   {
-    code: `const promise1 = new Promise(function(resolve, reject) {
-			setTimeout(resolve, 200, 'foo');
-		});
-		
-		promise1.then( result => {
-			console.log(result);
-		});
+    code: `    const promise1 = 
+    new Promise(function(resolve, reject) {
+      setTimeout(resolve, 200, 'foo');
+    });
+
+    promise1.then( result => {
+      console.log(result);
+    });
 		
     console.log("promise before resolution:", promise1);`,
     title: "Example 1: Race condition",
@@ -15,22 +16,22 @@ export default [
     within the javascript code. I have provided a few examples below.`
   },
   {
-    code: `const promise1 = new Promise(function(resolve, reject) {
-			setTimeout(resolve, 400, 'never gonna give you up');
+    code: `    const promise1 = new Promise(function(resolve, reject) {
+      setTimeout(resolve, 400, 'never gonna give you up');
     });
-    
+
     const promise2 = new Promise(function(resolve, reject) {
-			setTimeout(resolve, 400, 'never gonna let you down');
+      setTimeout(resolve, 400, 'never gonna let you down');
     });
     
     const promise3 = new Promise(function(resolve, reject) {
-			setTimeout(resolve, 400, 'never gonna turn around and desert you');
-		});
+      setTimeout(resolve, 400, 'never gonna turn around and desert you');
+    });
 		
-		promise1.then( result => {
+    promise1.then( result => {
       console.log(result);
       return promise2;
-		}).then( result => {
+    }).then( result => {
       console.log(result);
       return promise3;
     }).then(result => {
@@ -41,52 +42,51 @@ export default [
     together, to be sure that they will execute in the correct order.`
   },
   {
-    code: `const promise1 = new Promise(function(resolve, reject) {
-			setTimeout(resolve, 400, 'never gonna make you cry');
+    code: `    const promise1 = new Promise(function(resolve, reject) {
+      setTimeout(resolve, 400, 'never gonna make you cry');
     });
-    
+        
     const promise2 = new Promise(function(resolve, reject) {
-			setTimeout(resolve, 400, 'never gonna say goodbye');
+      setTimeout(resolve, 400, 'never gonna say goodbye');
     });
-    
+        
     const promise3 = new Promise(function(resolve, reject) {
-			setTimeout(resolve, 400, 'never gonna tell a lie or hurt you');
-		});
-    
+      setTimeout(resolve, 400, 'never gonna tell a lie or hurt you');
+    });
+        
     let promiseArray = [promise1, promise2, promise3];
-
+    
     Promise.all(promiseArray).then(resultArray => {
       resultArray.forEach(result => {
         console.log(result);
       });
-    });
-		`,
+    });`,
     title: "Example 3: Promise Async",
     overview: `If you have many promises to resolve that are not dependent on each other you can resolve them asynchronously with a promise all shown below. The promise
     all will take in an array of promises and return an array of the responses in the same order.`    
   },
   {
-    code: `const promise1 = new Promise(function(resolve, reject) {
-			setTimeout(reject, 200, 'never gonna make you cry');
-    }).catch( ()=> {
-      return 'Ricky Astley broken...';
+    code: `  const promise1 = new Promise(function(resolve, reject) {
+    setTimeout(reject, 200, 'never gonna make you cry');
+  }).catch( ()=> {
+    return 'Ricky Astley broken...';
+  });
+        
+  const promise2 = new Promise(function(resolve, reject) {
+    setTimeout(resolve, 400, 'never gonna say goodbye');
+  });
+        
+  const promise3 = new Promise(function(resolve, reject) {
+    setTimeout(resolve, 400, 'never gonna tell a lie or hurt you');
+  });
+        
+  let promiseArray = [promise1, promise2, promise3];
+        
+  Promise.all(promiseArray).then(resultArray => {
+    resultArray.forEach(result => {
+      console.log(result);
     });
-    
-    const promise2 = new Promise(function(resolve, reject) {
-			setTimeout(resolve, 400, 'never gonna say goodbye');
-    });
-    
-    const promise3 = new Promise(function(resolve, reject) {
-			setTimeout(resolve, 400, 'never gonna tell a lie or hurt you');
-		});
-    
-    let promiseArray = [promise1, promise2, promise3];
-    
-    Promise.all(promiseArray).then(resultArray => {
-      resultArray.forEach(result => {
-        console.log(result);
-      });
-    });
+  });
 		`,
     title: "Example 4: Promise Error handling",
     overview: `let's say you are running a promise all, but one of the promises fails... What then? You can catch each promise individually and handle the failure gracefully
@@ -94,19 +94,14 @@ export default [
     will still execute.`    
   },
   {
-    code: `
-    
-    const promise = new Promise(function(resolve, reject) {
-			setTimeout(resolve, 400, 'bingo!!!');
-    });
-    async function numbers() {
-      let response = await promise;
-      alert(response);
-      return response;
-    }
-    console.log(numbers());`,
+    code: `  async function numbers() {
+    let response = await fetch('http://numbersapi.com/42?json=true');
+    let body = await response.json();
+    console.log(body.text);
+  }
+  console.log(numbers());`,
     title: "Example 5: Async and Await",
     overview: `The aync keyword can be placed in front of any function delaration and that function will automatically be wrapped in a promise. The await keyword will ensure 
-    that the promise has resolved before it continues`    
+    that the promise has resolved before it continues. The await keyword can only be used inside of an async function.`    
   }
 ];
