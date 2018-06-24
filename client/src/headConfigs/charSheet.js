@@ -10,7 +10,7 @@ module.exports.default =
 		{ property:"og:site_name",	content:"kevindornellas.com"}
 	],
 	scss: [
-		{rel:"canonical", href:"http://www.kevindornellas.com/"},
-		{rel:"stylesheet", type:"text/css", href:"/index.css"}
+		{rel:"canonical", href:"http://www.kevindornellas.com/charSheet/"},
+		{rel:"stylesheet", type:"text/css", href:"/charSheet.css"}
 	]
 };

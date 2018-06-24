@@ -13,6 +13,6 @@ module.exports.default =
 	],
 	scss: [
 		{rel:"canonical", href:"http://www.kevindornellas.com/"},
-		{rel:"stylesheet", type:"text/css", href:"/index.css"}
+		{rel:"stylesheet", type:"text/css", href:"/home.css"}
 	]
 };

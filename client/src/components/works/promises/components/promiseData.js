@@ -21,11 +21,11 @@ export default [
     });
 
     const promise2 = new Promise(function(resolve, reject) {
-      setTimeout(resolve, 400, 'never gonna let you down');
+      setTimeout(resolve, 1400, 'never gonna let you down');
     });
     
     const promise3 = new Promise(function(resolve, reject) {
-      setTimeout(resolve, 400, 'never gonna turn around and desert you');
+      setTimeout(resolve, 2400, 'never gonna turn around and desert you');
     });
 		
     promise1.then( result => {
@@ -47,11 +47,11 @@ export default [
     });
         
     const promise2 = new Promise(function(resolve, reject) {
-      setTimeout(resolve, 400, 'never gonna say goodbye');
+      setTimeout(resolve, 1400, 'never gonna say goodbye');
     });
         
     const promise3 = new Promise(function(resolve, reject) {
-      setTimeout(resolve, 400, 'never gonna tell a lie or hurt you');
+      setTimeout(resolve, 2400, 'never gonna tell a lie or hurt you');
     });
         
     let promiseArray = [promise1, promise2, promise3];
@@ -73,11 +73,11 @@ export default [
   });
         
   const promise2 = new Promise(function(resolve, reject) {
-    setTimeout(resolve, 400, 'never gonna say goodbye');
+    setTimeout(resolve, 1400, 'never gonna say goodbye');
   });
         
   const promise3 = new Promise(function(resolve, reject) {
-    setTimeout(resolve, 400, 'never gonna tell a lie or hurt you');
+    setTimeout(resolve, 2400, 'never gonna tell a lie or hurt you');
   });
         
   let promiseArray = [promise1, promise2, promise3];

@@ -56,6 +56,6 @@ module.exports = {
     new UglifyJSPlugin({
       sourceMap: true
     }),
-    new ExtractTextPlugin('index.css'),
+    new ExtractTextPlugin('[name].css'),
   ],
 };

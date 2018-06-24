@@ -6,6 +6,6 @@ module.exports.default =
 	],
 	scss: [
 		{rel:"canonical", href:"http://www.kevindornellas.com/promises/"},
-		{rel:"stylesheet", type:"text/css", href:"/index.css"}
+		{rel:"stylesheet", type:"text/css", href:"/promises.css"}
 	]
 };

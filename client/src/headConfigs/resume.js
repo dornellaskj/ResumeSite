@@ -12,6 +12,6 @@ module.exports.default =
 	],
 	scss: [
 		{rel:"canonical", href:"http://www.kevindornellas.com/resume/"},
-		{rel:"stylesheet", type:"text/css", href:"/index.css"}
+		{rel:"stylesheet", type:"text/css", href:"/resume.css"}
 	]
 };
