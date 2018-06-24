@@ -131,14 +131,14 @@ class App extends Component {
 	render() {
 		return (
 			<div className="button-container">
-				{idToken && <div className="save-button-container"><button className="addButton" onClick={e => this.getData()}>GET DATA</button>  {!this.props.noChars && <button className="addButton" onClick={e => this.saveData()}>SAVE DATA</button>}</div>}
+				{idToken && <div className="save-button-container"><button className="addButton" onClick={e => this.getData()}>GET CHAR DATA</button>  {!this.props.noChars && <button className="addButton" onClick={e => this.saveData()}>SAVE CHAR DATA</button>}</div>}
 				<div className="google-button">
 					{!idToken && <GoogleLogin socialId="485516213096-tf621g1e32bht5h271d3ej3h42rc73b6.apps.googleusercontent.com"
 						className="google-login"
 						scope="profile"
 						fetchBasicProfile={false}
 						responseHandler={this.responseGoogle}
-						buttonText="Login With Google" />}
+						buttonText="" />}
 				</div>
 			</div>
 		);
