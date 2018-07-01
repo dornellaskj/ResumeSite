@@ -24,7 +24,7 @@ class App extends Component {
 
 	saveData() {
 		let stringifiedChars = this.getDataLocalStorage();
-		fetch('http://www.academicstudysolutions.com/Services/GoogleAuth.php/', {
+		fetch('https://www.academicstudysolutions.com/Services/GoogleAuth.php/', {
 			"async": true,
 			"crossDomain": true,
 			"method": "POST",
