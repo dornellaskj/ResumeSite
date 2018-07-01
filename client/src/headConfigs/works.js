@@ -5,7 +5,7 @@ module.exports.default =
 		{ name: "viewport", content: "width=device-width,initial-scale=1" }
 	],
 	scss: [
-		{rel:"canonical", href:"http://www.kevindornellas.com/works/"},
+		{rel:"canonical", href:"https://www.kevindornellas.com/works/"},
 		{rel:"stylesheet", type:"text/css", href:"/index.css"}
 	]
 };
