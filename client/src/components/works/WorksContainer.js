@@ -21,7 +21,7 @@ export default class WorksContainer extends Component {
                     <a href="/promises/">
                         <h4 className="section-header">Learn Javascript Promises</h4>
                     </a>
-                    <a href="https://prezi.com/e8dgwxugqbpg/seo/">
+                    <a href="https://prezi.com/e8dgwxugqbpg/seo/" target="_blank">
                         <h4 className="section-header">SEO Presentation</h4>
                     </a>
                 </div>
