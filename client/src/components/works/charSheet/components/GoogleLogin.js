@@ -59,7 +59,7 @@ class App extends Component {
 	}
 
 	getData() {
-		fetch('http://www.academicstudysolutions.com/Services/GoogleAuth.php/', {
+		fetch('https://www.academicstudysolutions.com/Services/GoogleAuth.php/', {
 			"async": true,
 			method: 'GET',
 			"crossDomain": true,
