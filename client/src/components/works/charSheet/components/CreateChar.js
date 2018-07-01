@@ -51,8 +51,6 @@ export default class CreateChar extends Component {
 					<div className="col-md-2">
 						<select id="character-type-selection" className="control-label" onChange={e => this.setCharCreateType(e.target.value)}>
 							<option value="sagaChar" selected>Saga Character</option>
-							<option value="sagaVehicle">Saga Vehicle</option>
-							<option value="dunChar">Dungeon Character</option>
 						</select>
 					</div>
 					<div className="col-md-2">
