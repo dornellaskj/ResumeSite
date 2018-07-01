@@ -12,7 +12,7 @@ export default (req, res) => {
 		res.end();
 	} else {
 		let sitemap = sm.createSitemap ({
-      hostname: 'http://www.kevindornellas.com',
+      hostname: 'https://www.kevindornellas.com',
       cacheTime: 600000,        // 600 sec - cache purge period
       urls: [
         { url: '/',  changefreq: 'daily', priority: 1.00 },
