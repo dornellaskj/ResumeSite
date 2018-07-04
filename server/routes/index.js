@@ -17,8 +17,9 @@ app.get('/resume', resume);
 app.get('/works', works);
 app.get('/charSheet', charSheet);
 app.get('/promises', promises);
+app.get('/promises', promises);
 app.get('/sitemap.xml', sitemap);
 
 app.listen(80, () => {
-  console.log('Hello World listening on port 80!');
+  console.log('SEO site listening on port 80!');
 });
